@@ -10,3 +10,7 @@ class TestCartePizzeria(unittest.TestCase):
 
     def test_is_empty(self):
         self.assertTrue(self.carte.is_empty()) 
+    
+    def test_nb_pizza(self):
+        self.assertEqual(self.carte.nb_pizzas(), 0)
+    
