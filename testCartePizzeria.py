@@ -28,6 +28,13 @@ class TestCartePizzeria(unittest.TestCase):
         self.assertIn("Aymerickinho", self.carte.pizzas)
         self.carte.pizzas = {}
 
+    def test_remove_pizza_mock(self):
+        pizza_mock = MagicMock()
+        pizza_mock.name = "Sekinho"
+        self.carte.pizzas = {pizza_mock}
+        self.carte.remove_pizza(pizza_mock)
+        self.assertNotIn("Sekinho", self.carte.pizzas)
+
     
 
 

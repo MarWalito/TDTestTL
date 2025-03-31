@@ -14,10 +14,8 @@ class CartePizzeria:
     def add_pizza(self, pizza: Pizza):
         self.pizzas[pizza.name] = pizza
 
-    def remove_pizza(self, name: str):
-        if name not in self.pizzas:
-            raise CartePizzeriaException(f"La pizza '{name}' n'existe pas sur la carte.")
-        del self.pizzas[name]
+    def remove_pizza(self, pizza):
+        self.pizzas.remove(pizza)
 
     def __repr__(self):
         return f"CartePizzeria({list(self.pizzas.values())})"
