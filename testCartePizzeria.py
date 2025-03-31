@@ -21,6 +21,18 @@ class TestCartePizzeria(unittest.TestCase):
         self.assertEqual(self.carte.nb_pizzas(), 1)
         self.carte.pizzas = {}
 
+    def test_add_pizza_mock(self):
+        pizza_mock = MagicMock()
+        pizza_mock.name = "Aymerickinho"
+        self.carte.add_pizza(pizza_mock)
+        self.assertIn("Aymerickinho", self.carte.pizzas)
+        self.carte.pizzas = {}
+
+    
+
+
+
+
         
     
 
